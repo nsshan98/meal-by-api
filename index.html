@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Food Mania!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <h1 class="ml-2">Food Mania!</h1>
+    <section>
+        <div id="show-food-details"></div>
+    </section>
+    <section>
+        <div class="d-flex">
+            <input class="form-control me-2" style="width: 20%;" id="search-food" type="text" placeholder="Hungry? Let's Find Some">
+            <button class="btn btn-primary" onclick="showFood()">Find Food!</button>
+        </div>
+    </section>
+
+    <!-- Loading API -->
+    <section id="loader" class="d-none">
+        <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status"></div>
+        </div>
+    </section>
+
+    <section class="mt-2">
+        <div id="display-meal" class="row row-cols-1 row-cols-md-3">
+            <!-- Display All Meal -->
+        </div>
+
+        <div id="not-found-meal" class="text-danger ml-2 d-none">
+            <h3>Ops! No Meal Found!</h3>
+        </div>
+    </section>
+
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="mealDetailsModal" tabindex="-1" role="dialog" aria-labelledby="mealDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mealDetailsModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="meal-details-modal">
+                    <!-- Add your modal content here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="meal.js"></script>
+</body>
+</html>
